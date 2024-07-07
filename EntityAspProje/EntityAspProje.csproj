@@ -91,6 +91,7 @@
     <Content Include="Kategoriler.aspx" />
     <Content Include="KategoriSil.aspx" />
     <Content Include="LinqKartlar\istatistik.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Login\css\main.css" />
     <Content Include="Login\css\util.css" />
     <Content Include="Login\fonts\font-awesome-4.7.0\css\font-awesome.css" />
@@ -244,6 +245,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TBLADMIN.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TBLKATEGORI.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -293,6 +297,13 @@
     </Compile>
     <Compile Include="LinqKartlar\istatistik.aspx.designer.cs">
       <DependentUpon>istatistik.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Musteri\Musteriler.aspx.cs">
       <DependentUpon>Musteriler.aspx</DependentUpon>

@@ -14,6 +14,7 @@
         <AssociationConnector Association="BONUSASPDBModel.FK_TBLSATIS_TBLMUSTERI" ManuallyRouted="false" />
         <AssociationConnector Association="BONUSASPDBModel.FK_TBLSATIS_TBLPERSONEL" ManuallyRouted="false" />
         <AssociationConnector Association="BONUSASPDBModel.FK_TBLSATIS_TBLURUNLER" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BONUSASPDBModel.TBLADMIN" Width="1.5" PointX="7.5" PointY="1.25" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

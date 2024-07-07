@@ -19,11 +19,9 @@
             </div>
 
             <ul class="nav navbar-nav">
-                <li><a href="/Musteriler/Musteriler.Aspx">Müşteriler</a></li>
+                <li><a href="/Musteri/Musteriler.Aspx">Müşteriler</a></li>
                 <li><a href="/Kategoriler.Aspx">Kategoriler</a></li>
-
                 <li><a href="/Urun/Urunler.Aspx">Ürünler</a></li>
-
                 <li><a href="#">Personeller</a></li>
                 <li><a href="/Satis/Satislar.Aspx">Satışlar</a></li>
                 <li><a href="#">Ayarlar</a></li>
