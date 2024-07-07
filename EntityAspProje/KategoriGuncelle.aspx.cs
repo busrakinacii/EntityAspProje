@@ -14,7 +14,7 @@ namespace EntityAspProje
         BONUSASPDBEntities db = new BONUSASPDBEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Page.IsPostBack != false)
+            if (Page.IsPostBack != true)
             {
                 int id = Convert.ToInt32(Request.QueryString["KATEGORIID"]);
                 TxtID.Text = id.ToString();

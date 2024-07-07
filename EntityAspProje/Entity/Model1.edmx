@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BONUSASPDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BONUSASPDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="TBLKATEGORI">
           <Key>
             <PropertyRef Name="KATEGORIID" />
@@ -47,6 +47,7 @@
           <Property Name="URUNKATEGORI" Type="tinyint" />
           <Property Name="URUNFIYAT" Type="decimal" Precision="18" Scale="2" />
           <Property Name="URUNSTOK" Type="smallint" />
+          <Property Name="DURUM" Type="bit" />
         </EntityType>
         <Association Name="FK_TBLSATIS_TBLMUSTERI">
           <End Role="TBLMUSTERI" Type="Self.TBLMUSTERI" Multiplicity="0..1" />
@@ -119,8 +120,7 @@
             <End Role="TBLURUNLER" EntitySet="TBLURUNLER" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BONUSASPDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -174,6 +174,7 @@
           <Property Name="URUNSTOK" Type="Int16" />
           <NavigationProperty Name="TBLKATEGORI" Relationship="Self.FK_TBLURUNLER_TBLKATEGORI" FromRole="TBLURUNLER" ToRole="TBLKATEGORI" />
           <NavigationProperty Name="TBLSATIS" Relationship="Self.FK_TBLSATIS_TBLURUNLER" FromRole="TBLURUNLER" ToRole="TBLSATIS" />
+          <Property Name="DURUM" Type="Boolean" />
         </EntityType>
         <Association Name="FK_TBLURUNLER_TBLKATEGORI">
           <End Role="TBLKATEGORI" Type="Self.TBLKATEGORI" Multiplicity="0..1" />
@@ -291,6 +292,7 @@
           <EntitySetMapping Name="TBLURUNLER">
             <EntityTypeMapping TypeName="BONUSASPDBModel.TBLURUNLER">
               <MappingFragment StoreEntitySet="TBLURUNLER">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="URUNID" ColumnName="URUNID" />
                 <ScalarProperty Name="URUNAD" ColumnName="URUNAD" />
                 <ScalarProperty Name="URUNMARKA" ColumnName="URUNMARKA" />

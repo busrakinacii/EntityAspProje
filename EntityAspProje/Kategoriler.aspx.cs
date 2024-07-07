@@ -13,9 +13,15 @@ namespace EntityAspProje
         BONUSASPDBEntities db = new BONUSASPDBEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
-            var degerler = db.TBLKATEGORI.ToList();
-            Repeater1.DataSource = degerler;
-            Repeater1.DataBind();
+        if(Page.IsPostBack!=true)
+            {
+                var degerler = db.TBLKATEGORI.ToList();
+                Repeater1.DataSource = degerler;
+                Repeater1.DataBind();
+
+            }
+
+
         }
     }
 }
