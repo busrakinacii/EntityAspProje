@@ -45,7 +45,7 @@
 				</div>
 
 				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
-                    <asp:TextBox ID="TxtSifre" runat="server" CssClass="input100" placeholder="Şifreniz"></asp:TextBox>
+                    <asp:TextBox ID="TxtSifre" runat="server" CssClass="input100" placeholder="Şifreniz" TextMode="Password"></asp:TextBox>
 					<span class="focus-input100"></span>
 				</div>
 
